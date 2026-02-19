@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+      - ./conf:/etc/nginx/conf.d
+    restart: always
